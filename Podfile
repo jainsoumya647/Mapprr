@@ -7,7 +7,7 @@ target 'Mapprr' do
 
   
   # Pods for Mapprr
-
+  pod 'Kingfisher', '~> 5.0'
   pod 'DGActivityIndicatorView'
 
   target 'MapprrTests' do

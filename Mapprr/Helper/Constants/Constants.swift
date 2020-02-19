@@ -47,12 +47,6 @@ enum Font: String {
 
 struct Text {
     static let curatedForMayank = "CURATED FOR MAYANK"
-    static let seeMore = "See More"
-    static let about = "About"
-    static let whereToEat = "Where To Eat"
-    static let best = "Best"
-    static let dishes = "Dishes"
-    static let photos = "Photos"
 }
 
 struct ErrorMessage {
@@ -61,5 +55,5 @@ struct ErrorMessage {
 }
 
 struct Image {
-    static let placeholder = UIImage(named:"logo")
+    static let placeholder = UIImage(named:"Avatar")
 }
