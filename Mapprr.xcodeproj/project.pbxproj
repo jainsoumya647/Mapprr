@@ -1,0 +1,988 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBD32D4E2E56574DEDFFA236 /* Pods_Mapprr_MapprrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 176062B2131B31FACFEC963B /* Pods_Mapprr_MapprrUITests.framework */; };
+		EC81CAAC5F7A0180C4D5AB3E /* Pods_MapprrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */; };
+		EF23D57623FC6127007539FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D57523FC6127007539FD /* AppDelegate.swift */; };
+		EF23D57823FC6127007539FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D57723FC6127007539FD /* SceneDelegate.swift */; };
+		EF23D57D23FC6127007539FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF23D57B23FC6127007539FD /* Main.storyboard */; };
+		EF23D58023FC6127007539FD /* Mapprr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF23D57E23FC6127007539FD /* Mapprr.xcdatamodeld */; };
+		EF23D58223FC6131007539FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF23D58123FC6131007539FD /* Assets.xcassets */; };
+		EF23D58523FC6131007539FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF23D58323FC6131007539FD /* LaunchScreen.storyboard */; };
+		EF23D59023FC6131007539FD /* MapprrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D58F23FC6131007539FD /* MapprrTests.swift */; };
+		EF23D59B23FC6131007539FD /* MapprrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D59A23FC6131007539FD /* MapprrUITests.swift */; };
+		EF23D5AD23FC64BC007539FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5AC23FC64BC007539FD /* HomeViewController.swift */; };
+		EF23D5B723FD9EC6007539FD /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B123FD9EC6007539FD /* UIApplication+Extension.swift */; };
+		EF23D5B823FD9EC6007539FD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B223FD9EC6007539FD /* UIColor+Extension.swift */; };
+		EF23D5B923FD9EC6007539FD /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B323FD9EC6007539FD /* UILabel+Extension.swift */; };
+		EF23D5BA23FD9EC6007539FD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B423FD9EC6007539FD /* UIView+Extension.swift */; };
+		EF23D5BB23FD9EC6007539FD /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B523FD9EC6007539FD /* UIViewController+Extension.swift */; };
+		EF23D5BC23FD9EC6007539FD /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5B623FD9EC6007539FD /* CGFloat+Extension.swift */; };
+		EF23D5C123FD9EF2007539FD /* ReusableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5BE23FD9EF2007539FD /* ReusableCollectionViewCell.swift */; };
+		EF23D5C223FD9EF2007539FD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5BF23FD9EF2007539FD /* ActivityIndicator.swift */; };
+		EF23D5C323FD9EF2007539FD /* ReusableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5C023FD9EF2007539FD /* ReusableTableViewCell.swift */; };
+		EF23D5C623FD9F23007539FD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5C523FD9F23007539FD /* Constants.swift */; };
+		EF23D5CA23FD9FA3007539FD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5C823FD9FA3007539FD /* HomeCell.swift */; };
+		EF23D5CB23FD9FA3007539FD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF23D5C923FD9FA3007539FD /* HomeCell.xib */; };
+		EF23D5DA23FDA124007539FD /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5CE23FDA124007539FD /* Environment.swift */; };
+		EF23D5DB23FDA124007539FD /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D023FDA124007539FD /* ParameterEncoding.swift */; };
+		EF23D5DC23FDA124007539FD /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D123FDA124007539FD /* URLParameterEncoder.swift */; };
+		EF23D5DD23FDA124007539FD /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D223FDA124007539FD /* JSONParameterEncoder.swift */; };
+		EF23D5DE23FDA124007539FD /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D423FDA124007539FD /* HTTPTask.swift */; };
+		EF23D5DF23FDA124007539FD /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D523FDA124007539FD /* HTTPMethod.swift */; };
+		EF23D5E023FDA124007539FD /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D623FDA124007539FD /* EndPointType.swift */; };
+		EF23D5E123FDA124007539FD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D823FDA124007539FD /* NetworkService.swift */; };
+		EF23D5E223FDA124007539FD /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5D923FDA124007539FD /* NetworkLogger.swift */; };
+		EF23D5E523FDA140007539FD /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5E423FDA140007539FD /* SearchRepository.swift */; };
+		EF23D5E723FDA15B007539FD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5E623FDA15B007539FD /* HomeViewModel.swift */; };
+		EF23D5EA23FDA39F007539FD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5E923FDA39F007539FD /* Repository.swift */; };
+		EF23D5EC23FDA9EE007539FD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5EB23FDA9EE007539FD /* Utility.swift */; };
+		F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF23D58C23FC6131007539FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF23D56A23FC6127007539FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF23D57123FC6127007539FD;
+			remoteInfo = Mapprr;
+		};
+		EF23D59723FC6131007539FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF23D56A23FC6127007539FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF23D57123FC6127007539FD;
+			remoteInfo = Mapprr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mapprr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB916E816CB75A157EC4459 /* Pods-Mapprr-MapprrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapprr-MapprrUITests.release.xcconfig"; path = "Target Support Files/Pods-Mapprr-MapprrUITests/Pods-Mapprr-MapprrUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1603B452ABC71874594A5320 /* Pods-Mapprr-MapprrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapprr-MapprrUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mapprr-MapprrUITests/Pods-Mapprr-MapprrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		176062B2131B31FACFEC963B /* Pods_Mapprr_MapprrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mapprr_MapprrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F0D7D582B84C10DA2F8965C /* Pods-Mapprr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapprr.release.xcconfig"; path = "Target Support Files/Pods-Mapprr/Pods-Mapprr.release.xcconfig"; sourceTree = "<group>"; };
+		3FFA4D0479D94463852328E0 /* Pods-MapprrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapprrTests.release.xcconfig"; path = "Target Support Files/Pods-MapprrTests/Pods-MapprrTests.release.xcconfig"; sourceTree = "<group>"; };
+		95543173039D2C35F0B66BB7 /* Pods-Mapprr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapprr.debug.xcconfig"; path = "Target Support Files/Pods-Mapprr/Pods-Mapprr.debug.xcconfig"; sourceTree = "<group>"; };
+		AC8C4687F7FF2610241E7129 /* Pods-MapprrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapprrTests.debug.xcconfig"; path = "Target Support Files/Pods-MapprrTests/Pods-MapprrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF23D57223FC6127007539FD /* Mapprr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapprr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF23D57523FC6127007539FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF23D57723FC6127007539FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF23D57C23FC6127007539FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF23D57F23FC6127007539FD /* Mapprr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mapprr.xcdatamodel; sourceTree = "<group>"; };
+		EF23D58123FC6131007539FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF23D58423FC6131007539FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF23D58623FC6131007539FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF23D58B23FC6131007539FD /* MapprrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapprrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF23D58F23FC6131007539FD /* MapprrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapprrTests.swift; sourceTree = "<group>"; };
+		EF23D59123FC6131007539FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF23D59623FC6131007539FD /* MapprrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapprrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF23D59A23FC6131007539FD /* MapprrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapprrUITests.swift; sourceTree = "<group>"; };
+		EF23D59C23FC6131007539FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF23D5AC23FC64BC007539FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EF23D5B123FD9EC6007539FD /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5B223FD9EC6007539FD /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5B323FD9EC6007539FD /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5B423FD9EC6007539FD /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5B523FD9EC6007539FD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5B623FD9EC6007539FD /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		EF23D5BE23FD9EF2007539FD /* ReusableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF23D5BF23FD9EF2007539FD /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		EF23D5C023FD9EF2007539FD /* ReusableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableTableViewCell.swift; sourceTree = "<group>"; };
+		EF23D5C523FD9F23007539FD /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EF23D5C823FD9FA3007539FD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		EF23D5C923FD9FA3007539FD /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		EF23D5CE23FDA124007539FD /* Environment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		EF23D5D023FDA124007539FD /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		EF23D5D123FDA124007539FD /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		EF23D5D223FDA124007539FD /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		EF23D5D423FDA124007539FD /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		EF23D5D523FDA124007539FD /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		EF23D5D623FDA124007539FD /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		EF23D5D823FDA124007539FD /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		EF23D5D923FDA124007539FD /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		EF23D5E423FDA140007539FD /* SearchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepository.swift; sourceTree = "<group>"; };
+		EF23D5E623FDA15B007539FD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EF23D5E923FDA39F007539FD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EF23D5EB23FDA9EE007539FD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapprrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF23D56F23FC6127007539FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D58823FC6131007539FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC81CAAC5F7A0180C4D5AB3E /* Pods_MapprrTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D59323FC6131007539FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBD32D4E2E56574DEDFFA236 /* Pods_Mapprr_MapprrUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		072C17F918A4678C98D43913 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */,
+				176062B2131B31FACFEC963B /* Pods_Mapprr_MapprrUITests.framework */,
+				F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1851FBBE1B2D96A9118B6D22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95543173039D2C35F0B66BB7 /* Pods-Mapprr.debug.xcconfig */,
+				2F0D7D582B84C10DA2F8965C /* Pods-Mapprr.release.xcconfig */,
+				1603B452ABC71874594A5320 /* Pods-Mapprr-MapprrUITests.debug.xcconfig */,
+				0EB916E816CB75A157EC4459 /* Pods-Mapprr-MapprrUITests.release.xcconfig */,
+				AC8C4687F7FF2610241E7129 /* Pods-MapprrTests.debug.xcconfig */,
+				3FFA4D0479D94463852328E0 /* Pods-MapprrTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF23D56923FC6127007539FD = {
+			isa = PBXGroup;
+			children = (
+				EF23D57423FC6127007539FD /* Mapprr */,
+				EF23D58E23FC6131007539FD /* MapprrTests */,
+				EF23D59923FC6131007539FD /* MapprrUITests */,
+				EF23D57323FC6127007539FD /* Products */,
+				1851FBBE1B2D96A9118B6D22 /* Pods */,
+				072C17F918A4678C98D43913 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF23D57323FC6127007539FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D57223FC6127007539FD /* Mapprr.app */,
+				EF23D58B23FC6131007539FD /* MapprrTests.xctest */,
+				EF23D59623FC6131007539FD /* MapprrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF23D57423FC6127007539FD /* Mapprr */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5E323FDA140007539FD /* ServiceLayer */,
+				EF23D5CD23FDA124007539FD /* Networking */,
+				EF23D5AE23FC685D007539FD /* Helper */,
+				EF23D5A923FC6388007539FD /* AppGroup */,
+				EF23D5A823FC6373007539FD /* AppDelegate */,
+				EF23D57B23FC6127007539FD /* Main.storyboard */,
+				EF23D58123FC6131007539FD /* Assets.xcassets */,
+				EF23D58323FC6131007539FD /* LaunchScreen.storyboard */,
+				EF23D58623FC6131007539FD /* Info.plist */,
+				EF23D57E23FC6127007539FD /* Mapprr.xcdatamodeld */,
+			);
+			path = Mapprr;
+			sourceTree = "<group>";
+		};
+		EF23D58E23FC6131007539FD /* MapprrTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D58F23FC6131007539FD /* MapprrTests.swift */,
+				EF23D59123FC6131007539FD /* Info.plist */,
+			);
+			path = MapprrTests;
+			sourceTree = "<group>";
+		};
+		EF23D59923FC6131007539FD /* MapprrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D59A23FC6131007539FD /* MapprrUITests.swift */,
+				EF23D59C23FC6131007539FD /* Info.plist */,
+			);
+			path = MapprrUITests;
+			sourceTree = "<group>";
+		};
+		EF23D5A823FC6373007539FD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D57523FC6127007539FD /* AppDelegate.swift */,
+				EF23D57723FC6127007539FD /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EF23D5A923FC6388007539FD /* AppGroup */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5AA23FC6416007539FD /* Home */,
+			);
+			path = AppGroup;
+			sourceTree = "<group>";
+		};
+		EF23D5AA23FC6416007539FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5E823FDA38B007539FD /* Model */,
+				EF23D5CC23FDA0F9007539FD /* ViewModel */,
+				EF23D5AB23FC6420007539FD /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EF23D5AB23FC6420007539FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5C723FD9F75007539FD /* Cell */,
+				EF23D5AC23FC64BC007539FD /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF23D5AE23FC685D007539FD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5C423FD9F23007539FD /* Constants */,
+				EF23D5BD23FD9EF2007539FD /* CommonClass */,
+				EF23D5B023FD9EC6007539FD /* Extensions */,
+				EF23D5EB23FDA9EE007539FD /* Utility.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		EF23D5B023FD9EC6007539FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5B123FD9EC6007539FD /* UIApplication+Extension.swift */,
+				EF23D5B223FD9EC6007539FD /* UIColor+Extension.swift */,
+				EF23D5B323FD9EC6007539FD /* UILabel+Extension.swift */,
+				EF23D5B423FD9EC6007539FD /* UIView+Extension.swift */,
+				EF23D5B523FD9EC6007539FD /* UIViewController+Extension.swift */,
+				EF23D5B623FD9EC6007539FD /* CGFloat+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF23D5BD23FD9EF2007539FD /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5BE23FD9EF2007539FD /* ReusableCollectionViewCell.swift */,
+				EF23D5BF23FD9EF2007539FD /* ActivityIndicator.swift */,
+				EF23D5C023FD9EF2007539FD /* ReusableTableViewCell.swift */,
+			);
+			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		EF23D5C423FD9F23007539FD /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5C523FD9F23007539FD /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		EF23D5C723FD9F75007539FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5C823FD9FA3007539FD /* HomeCell.swift */,
+				EF23D5C923FD9FA3007539FD /* HomeCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF23D5CC23FDA0F9007539FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5E623FDA15B007539FD /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF23D5CD23FDA124007539FD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5CE23FDA124007539FD /* Environment.swift */,
+				EF23D5CF23FDA124007539FD /* Encoding */,
+				EF23D5D323FDA124007539FD /* Endpoint */,
+				EF23D5D723FDA124007539FD /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		EF23D5CF23FDA124007539FD /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5D023FDA124007539FD /* ParameterEncoding.swift */,
+				EF23D5D123FDA124007539FD /* URLParameterEncoder.swift */,
+				EF23D5D223FDA124007539FD /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		EF23D5D323FDA124007539FD /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5D423FDA124007539FD /* HTTPTask.swift */,
+				EF23D5D523FDA124007539FD /* HTTPMethod.swift */,
+				EF23D5D623FDA124007539FD /* EndPointType.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		EF23D5D723FDA124007539FD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5D823FDA124007539FD /* NetworkService.swift */,
+				EF23D5D923FDA124007539FD /* NetworkLogger.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		EF23D5E323FDA140007539FD /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5E423FDA140007539FD /* SearchRepository.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		EF23D5E823FDA38B007539FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5E923FDA39F007539FD /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF23D57123FC6127007539FD /* Mapprr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF23D59F23FC6131007539FD /* Build configuration list for PBXNativeTarget "Mapprr" */;
+			buildPhases = (
+				700C50A2E14DC76C857835B1 /* [CP] Check Pods Manifest.lock */,
+				EF23D56E23FC6127007539FD /* Sources */,
+				EF23D56F23FC6127007539FD /* Frameworks */,
+				EF23D57023FC6127007539FD /* Resources */,
+				96FA03F1FF8ACF14E56A2387 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mapprr;
+			productName = Mapprr;
+			productReference = EF23D57223FC6127007539FD /* Mapprr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF23D58A23FC6131007539FD /* MapprrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF23D5A223FC6131007539FD /* Build configuration list for PBXNativeTarget "MapprrTests" */;
+			buildPhases = (
+				827B4EE7B48045857A76D166 /* [CP] Check Pods Manifest.lock */,
+				EF23D58723FC6131007539FD /* Sources */,
+				EF23D58823FC6131007539FD /* Frameworks */,
+				EF23D58923FC6131007539FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF23D58D23FC6131007539FD /* PBXTargetDependency */,
+			);
+			name = MapprrTests;
+			productName = MapprrTests;
+			productReference = EF23D58B23FC6131007539FD /* MapprrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF23D59523FC6131007539FD /* MapprrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF23D5A523FC6131007539FD /* Build configuration list for PBXNativeTarget "MapprrUITests" */;
+			buildPhases = (
+				8BB9DCD00E1B71DDFDAD0863 /* [CP] Check Pods Manifest.lock */,
+				EF23D59223FC6131007539FD /* Sources */,
+				EF23D59323FC6131007539FD /* Frameworks */,
+				EF23D59423FC6131007539FD /* Resources */,
+				3F0C89BA559907C7254532A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF23D59823FC6131007539FD /* PBXTargetDependency */,
+			);
+			name = MapprrUITests;
+			productName = MapprrUITests;
+			productReference = EF23D59623FC6131007539FD /* MapprrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF23D56A23FC6127007539FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Soumya Jain";
+				TargetAttributes = {
+					EF23D57123FC6127007539FD = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					EF23D58A23FC6131007539FD = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF23D57123FC6127007539FD;
+					};
+					EF23D59523FC6131007539FD = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = EF23D57123FC6127007539FD;
+					};
+				};
+			};
+			buildConfigurationList = EF23D56D23FC6127007539FD /* Build configuration list for PBXProject "Mapprr" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF23D56923FC6127007539FD;
+			productRefGroup = EF23D57323FC6127007539FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF23D57123FC6127007539FD /* Mapprr */,
+				EF23D58A23FC6131007539FD /* MapprrTests */,
+				EF23D59523FC6131007539FD /* MapprrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF23D57023FC6127007539FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF23D58523FC6131007539FD /* LaunchScreen.storyboard in Resources */,
+				EF23D58223FC6131007539FD /* Assets.xcassets in Resources */,
+				EF23D5CB23FD9FA3007539FD /* HomeCell.xib in Resources */,
+				EF23D57D23FC6127007539FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D58923FC6131007539FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D59423FC6131007539FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F0C89BA559907C7254532A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mapprr-MapprrUITests/Pods-Mapprr-MapprrUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mapprr-MapprrUITests/Pods-Mapprr-MapprrUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mapprr-MapprrUITests/Pods-Mapprr-MapprrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		700C50A2E14DC76C857835B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mapprr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827B4EE7B48045857A76D166 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapprrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BB9DCD00E1B71DDFDAD0863 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mapprr-MapprrUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96FA03F1FF8ACF14E56A2387 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mapprr/Pods-Mapprr-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mapprr/Pods-Mapprr-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mapprr/Pods-Mapprr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF23D56E23FC6127007539FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF23D5EC23FDA9EE007539FD /* Utility.swift in Sources */,
+				EF23D5E223FDA124007539FD /* NetworkLogger.swift in Sources */,
+				EF23D5BB23FD9EC6007539FD /* UIViewController+Extension.swift in Sources */,
+				EF23D5DA23FDA124007539FD /* Environment.swift in Sources */,
+				EF23D5E123FDA124007539FD /* NetworkService.swift in Sources */,
+				EF23D5DF23FDA124007539FD /* HTTPMethod.swift in Sources */,
+				EF23D58023FC6127007539FD /* Mapprr.xcdatamodeld in Sources */,
+				EF23D57623FC6127007539FD /* AppDelegate.swift in Sources */,
+				EF23D5C323FD9EF2007539FD /* ReusableTableViewCell.swift in Sources */,
+				EF23D5CA23FD9FA3007539FD /* HomeCell.swift in Sources */,
+				EF23D5BA23FD9EC6007539FD /* UIView+Extension.swift in Sources */,
+				EF23D5DB23FDA124007539FD /* ParameterEncoding.swift in Sources */,
+				EF23D5DC23FDA124007539FD /* URLParameterEncoder.swift in Sources */,
+				EF23D5C223FD9EF2007539FD /* ActivityIndicator.swift in Sources */,
+				EF23D5C123FD9EF2007539FD /* ReusableCollectionViewCell.swift in Sources */,
+				EF23D5BC23FD9EC6007539FD /* CGFloat+Extension.swift in Sources */,
+				EF23D57823FC6127007539FD /* SceneDelegate.swift in Sources */,
+				EF23D5B923FD9EC6007539FD /* UILabel+Extension.swift in Sources */,
+				EF23D5B823FD9EC6007539FD /* UIColor+Extension.swift in Sources */,
+				EF23D5E523FDA140007539FD /* SearchRepository.swift in Sources */,
+				EF23D5E023FDA124007539FD /* EndPointType.swift in Sources */,
+				EF23D5C623FD9F23007539FD /* Constants.swift in Sources */,
+				EF23D5E723FDA15B007539FD /* HomeViewModel.swift in Sources */,
+				EF23D5DE23FDA124007539FD /* HTTPTask.swift in Sources */,
+				EF23D5B723FD9EC6007539FD /* UIApplication+Extension.swift in Sources */,
+				EF23D5AD23FC64BC007539FD /* HomeViewController.swift in Sources */,
+				EF23D5DD23FDA124007539FD /* JSONParameterEncoder.swift in Sources */,
+				EF23D5EA23FDA39F007539FD /* Repository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D58723FC6131007539FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF23D59023FC6131007539FD /* MapprrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF23D59223FC6131007539FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF23D59B23FC6131007539FD /* MapprrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF23D58D23FC6131007539FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF23D57123FC6127007539FD /* Mapprr */;
+			targetProxy = EF23D58C23FC6131007539FD /* PBXContainerItemProxy */;
+		};
+		EF23D59823FC6131007539FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF23D57123FC6127007539FD /* Mapprr */;
+			targetProxy = EF23D59723FC6131007539FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF23D57B23FC6127007539FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF23D57C23FC6127007539FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF23D58323FC6131007539FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF23D58423FC6131007539FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF23D59D23FC6131007539FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF23D59E23FC6131007539FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF23D5A023FC6131007539FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95543173039D2C35F0B66BB7 /* Pods-Mapprr.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mapprr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.Mapprr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF23D5A123FC6131007539FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F0D7D582B84C10DA2F8965C /* Pods-Mapprr.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mapprr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.Mapprr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF23D5A323FC6131007539FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC8C4687F7FF2610241E7129 /* Pods-MapprrTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MapprrTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.MapprrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mapprr.app/Mapprr";
+			};
+			name = Debug;
+		};
+		EF23D5A423FC6131007539FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FFA4D0479D94463852328E0 /* Pods-MapprrTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MapprrTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.MapprrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mapprr.app/Mapprr";
+			};
+			name = Release;
+		};
+		EF23D5A623FC6131007539FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1603B452ABC71874594A5320 /* Pods-Mapprr-MapprrUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MapprrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.MapprrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mapprr;
+			};
+			name = Debug;
+		};
+		EF23D5A723FC6131007539FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB916E816CB75A157EC4459 /* Pods-Mapprr-MapprrUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MapprrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soumya.MapprrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mapprr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF23D56D23FC6127007539FD /* Build configuration list for PBXProject "Mapprr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF23D59D23FC6131007539FD /* Debug */,
+				EF23D59E23FC6131007539FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF23D59F23FC6131007539FD /* Build configuration list for PBXNativeTarget "Mapprr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF23D5A023FC6131007539FD /* Debug */,
+				EF23D5A123FC6131007539FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF23D5A223FC6131007539FD /* Build configuration list for PBXNativeTarget "MapprrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF23D5A323FC6131007539FD /* Debug */,
+				EF23D5A423FC6131007539FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF23D5A523FC6131007539FD /* Build configuration list for PBXNativeTarget "MapprrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF23D5A623FC6131007539FD /* Debug */,
+				EF23D5A723FC6131007539FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF23D57E23FC6127007539FD /* Mapprr.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF23D57F23FC6127007539FD /* Mapprr.xcdatamodel */,
+			);
+			currentVersion = EF23D57F23FC6127007539FD /* Mapprr.xcdatamodel */;
+			path = Mapprr.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF23D56A23FC6127007539FD /* Project object */;
+}

@@ -1,0 +1,16 @@
+PODS:
+  - DGActivityIndicatorView (2.1.1)
+
+DEPENDENCIES:
+  - DGActivityIndicatorView
+
+SPEC REPOS:
+  trunk:
+    - DGActivityIndicatorView
+
+SPEC CHECKSUMS:
+  DGActivityIndicatorView: ff2c76073d79692f724863c8dd38685866a03cb6
+
+PODFILE CHECKSUM: 2768680f1664cf15f1a35dc0a8ecf451f8ea6087
+
+COCOAPODS: 1.8.4
