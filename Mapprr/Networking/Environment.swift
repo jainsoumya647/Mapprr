@@ -40,6 +40,8 @@ enum Environment: String, CaseIterable {
 
 enum ApiName {
     case getRepos(_ text: String)
+    case getContributors(_ repoName: String)
+    case getReposOfUser(_ user: String)
 }
 
 extension ApiName: EndPointType {
@@ -52,12 +54,16 @@ extension ApiName: EndPointType {
         switch self {
         case .getRepos:
             return "search/repositories"
+        case .getContributors(let repoName):
+            return "repos/\(repoName)/contributors"
+        case .getReposOfUser(let user):
+            return "users/\(user)/repos"
         }
     }
 
     var httpMethod: HTTPMethod {
         switch self {
-        case .getRepos:
+        case .getRepos, .getContributors, .getReposOfUser:
             return .get
         }
     }
@@ -69,6 +75,10 @@ extension ApiName: EndPointType {
             params["q"] = searchText
             params["order"] = "desc"
             return .requestParametersAndHeaders(parameters: params, bodyEncoding: .jsonEncoding, additionHeaders: self.headers)
+        case .getContributors:
+            return .requestParametersAndHeaders(parameters: nil, bodyEncoding: .jsonEncoding, additionHeaders: self.headers)
+        case .getReposOfUser:
+            return .requestParametersAndHeaders(parameters: nil, bodyEncoding: .jsonEncoding, additionHeaders: self.headers)
         }
     }
 

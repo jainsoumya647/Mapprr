@@ -43,6 +43,11 @@
 		EF23D5E723FDA15B007539FD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5E623FDA15B007539FD /* HomeViewModel.swift */; };
 		EF23D5EA23FDA39F007539FD /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5E923FDA39F007539FD /* Repository.swift */; };
 		EF23D5EC23FDA9EE007539FD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5EB23FDA9EE007539FD /* Utility.swift */; };
+		EF23D5F023FDCBD4007539FD /* Contributors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5EF23FDCBD4007539FD /* Contributors.swift */; };
+		EF23D5F423FDCEFC007539FD /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5F323FDCEFC007539FD /* RepoDetailsViewController.swift */; };
+		EF23D5F823FDD199007539FD /* RepoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5F623FDD199007539FD /* RepoDetailsCell.swift */; };
+		EF23D5F923FDD199007539FD /* RepoDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF23D5F723FDD199007539FD /* RepoDetailsCell.xib */; };
+		EF23D5FC23FDD31C007539FD /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D5FB23FDD31C007539FD /* RepoDetailsViewModel.swift */; };
 		F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +117,11 @@
 		EF23D5E623FDA15B007539FD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EF23D5E923FDA39F007539FD /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EF23D5EB23FDA9EE007539FD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EF23D5EF23FDCBD4007539FD /* Contributors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributors.swift; sourceTree = "<group>"; };
+		EF23D5F323FDCEFC007539FD /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		EF23D5F623FDD199007539FD /* RepoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsCell.swift; sourceTree = "<group>"; };
+		EF23D5F723FDD199007539FD /* RepoDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsCell.xib; sourceTree = "<group>"; };
+		EF23D5FB23FDD31C007539FD /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
 		F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapprrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -235,6 +245,7 @@
 		EF23D5A923FC6388007539FD /* AppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				EF23D5F123FDCEC2007539FD /* RepoDetails */,
 				EF23D5AA23FC6416007539FD /* Home */,
 			);
 			path = AppGroup;
@@ -362,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				EF23D5E423FDA140007539FD /* SearchRepository.swift */,
+				EF23D5EF23FDCBD4007539FD /* Contributors.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -372,6 +384,41 @@
 				EF23D5E923FDA39F007539FD /* Repository.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EF23D5F123FDCEC2007539FD /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5FA23FDD307007539FD /* ViewModel */,
+				EF23D5F223FDCED2007539FD /* View */,
+			);
+			path = RepoDetails;
+			sourceTree = "<group>";
+		};
+		EF23D5F223FDCED2007539FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5F523FDD159007539FD /* Cell */,
+				EF23D5F323FDCEFC007539FD /* RepoDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF23D5F523FDD159007539FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5F623FDD199007539FD /* RepoDetailsCell.swift */,
+				EF23D5F723FDD199007539FD /* RepoDetailsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EF23D5FA23FDD307007539FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF23D5FB23FDD31C007539FD /* RepoDetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +533,7 @@
 				EF23D58523FC6131007539FD /* LaunchScreen.storyboard in Resources */,
 				EF23D58223FC6131007539FD /* Assets.xcassets in Resources */,
 				EF23D5CB23FD9FA3007539FD /* HomeCell.xib in Resources */,
+				EF23D5F923FDD199007539FD /* RepoDetailsCell.xib in Resources */,
 				EF23D57D23FC6127007539FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF23D5F823FDD199007539FD /* RepoDetailsCell.swift in Sources */,
 				EF23D5EC23FDA9EE007539FD /* Utility.swift in Sources */,
 				EF23D5E223FDA124007539FD /* NetworkLogger.swift in Sources */,
 				EF23D5BB23FD9EC6007539FD /* UIViewController+Extension.swift in Sources */,
@@ -638,8 +687,11 @@
 				EF23D5C623FD9F23007539FD /* Constants.swift in Sources */,
 				EF23D5E723FDA15B007539FD /* HomeViewModel.swift in Sources */,
 				EF23D5DE23FDA124007539FD /* HTTPTask.swift in Sources */,
+				EF23D5F023FDCBD4007539FD /* Contributors.swift in Sources */,
+				EF23D5F423FDCEFC007539FD /* RepoDetailsViewController.swift in Sources */,
 				EF23D5B723FD9EC6007539FD /* UIApplication+Extension.swift in Sources */,
 				EF23D5AD23FC64BC007539FD /* HomeViewController.swift in Sources */,
+				EF23D5FC23FDD31C007539FD /* RepoDetailsViewModel.swift in Sources */,
 				EF23D5DD23FDA124007539FD /* JSONParameterEncoder.swift in Sources */,
 				EF23D5EA23FDA39F007539FD /* Repository.swift in Sources */,
 			);

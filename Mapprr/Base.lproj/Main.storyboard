@@ -46,6 +46,44 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
         </scene>
+        <!--Repo Details View Controller-->
+        <scene sceneID="wQO-9X-Lb1">
+            <objects>
+                <viewController storyboardIdentifier="RepoDetailsViewController" id="zIq-xe-rJK" customClass="RepoDetailsViewController" customModule="Mapprr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sAJ-bG-a6G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fhf-Dd-tz0">
+                                <rect key="frame" x="0.0" y="304.5" width="414" height="557.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="U7q-UP-elo">
+                                <rect key="frame" x="10" y="114" width="394" height="170.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fhf-Dd-tz0" firstAttribute="leading" secondItem="vOa-3z-5J7" secondAttribute="leading" id="J2S-vK-ndP"/>
+                            <constraint firstItem="vOa-3z-5J7" firstAttribute="trailing" secondItem="Fhf-Dd-tz0" secondAttribute="trailing" id="L3Z-Yr-16L"/>
+                            <constraint firstItem="vOa-3z-5J7" firstAttribute="trailing" secondItem="U7q-UP-elo" secondAttribute="trailing" constant="10" id="M2b-Kl-TOu"/>
+                            <constraint firstItem="U7q-UP-elo" firstAttribute="leading" secondItem="vOa-3z-5J7" secondAttribute="leading" constant="10" id="SQg-rR-Ipy"/>
+                            <constraint firstItem="vOa-3z-5J7" firstAttribute="bottom" secondItem="Fhf-Dd-tz0" secondAttribute="bottom" id="TQy-PA-73O"/>
+                            <constraint firstItem="U7q-UP-elo" firstAttribute="centerX" secondItem="vOa-3z-5J7" secondAttribute="centerX" id="c8t-o2-gkM"/>
+                            <constraint firstItem="Fhf-Dd-tz0" firstAttribute="top" secondItem="U7q-UP-elo" secondAttribute="bottom" constant="20" id="xPG-N1-Y5o"/>
+                            <constraint firstItem="U7q-UP-elo" firstAttribute="top" secondItem="vOa-3z-5J7" secondAttribute="top" constant="70" id="zfm-LH-xlM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vOa-3z-5J7"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="U7q-UP-elo" id="i0o-NS-Pm4"/>
+                        <outlet property="tableView" destination="Fhf-Dd-tz0" id="vGV-9q-pxP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inI-bl-IbK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="130"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="iBN-6o-lYc">
             <objects>
@@ -64,4 +102,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Avatar" width="170.5" height="170.5"/>
+    </resources>
 </document>

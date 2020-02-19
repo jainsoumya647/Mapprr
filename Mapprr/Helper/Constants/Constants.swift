@@ -13,7 +13,7 @@ enum Storyboard: String {
 }
 
 enum Controller: String {
-    case blogDetailsViewController = "BlogDetailsViewController"
+    case repoDetailsViewController = "RepoDetailsViewController"
 }
 
 struct Height {
