@@ -34,6 +34,7 @@ struct Repository: Codable {
         case fullName = "full_name"
         case watchersCount = "watchers_count"
         case owner = "owner"
+        case description = "description"
     }
     
     func getName() -> String {
@@ -67,5 +68,9 @@ struct Owner: Codable {
         case id = "id"
         case avatarURL = "avatar_url"
         case login = "login"
+    }
+    
+    func getAvatarURL() -> String? {
+        return self.avatarURL
     }
 }

@@ -10,35 +10,41 @@ import Foundation
 
 class RepoDetailsViewModel {
     
-    enum RepoDetailsType {
-        case name
-        case link
-        case description
-    }
-    
-    var repository: Repository
-    var rows: [RepoDetailsType]
+    private var repository: Repository
     var reloadData: (() -> Void)?
-    
+    private var owners: [Owner]? {
+        didSet {
+            self.reloadData?()
+        }
+    }
     init(repo: Repository) {
         self.repository = repo
-        self.rows = [.name, .link, .description]
+        self.getContributors(repo: repo)
     }
     
-    func getTexts(on index: Int) -> (String, String) {
-        
-        switch self.rows[index] {
-        case .name:
-            return ("Name: \(self.repository.getName())", "")
-        case .link:
-            return ("Link: Click Here", "")
-        case .description:
-            return ("Description:", "\(self.repository.getDescription())")
+    func getNumberOfItems() -> Int {
+        return self.owners?.count ?? 0
+    }
+    
+    func getRepositoryName() -> String {
+        return self.repository.getFullName()
+    }
+    
+    func getDescription() -> String {
+        return self.repository.getDescription()
+    }
+    
+    func getOwner(for index: Int) -> Owner? {
+        return self.owners?[index]
+    }
+    
+    func getAvatarImage() -> String? {
+        return self.repository.owner?.avatarURL
+    }
+    
+    func getContributors(repo: Repository) {
+        ContributorsService().getContributors(repoName: repo.getFullName()) { (owners) in
+            self.owners = owners
         }
-        
-    }
-    
-    func getNumberOfRows() -> Int {
-        return self.rows.count
     }
 }

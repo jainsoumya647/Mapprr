@@ -17,6 +17,10 @@ enum Controller: String {
 }
 
 struct Height {
+    static func safeTopStatusArea() -> CGFloat {
+        return UIApplication.shared.topSafeArea
+    }
+    static let naviagtionHeight: CGFloat = 50 + Height.safeTopStatusArea()
     static let footerHeight:CGFloat = 40
     static let headerHeight:CGFloat = 105 //+ Height.safeTopStatusArea()
     static let collectionHeight:CGFloat = 100
@@ -35,6 +39,10 @@ struct FontSize {
     static private func getCustomSizeOf(font: CGFloat) -> CGFloat {
         return font.configureAccordingToScreen()
     }
+}
+
+enum NibName: String {
+    case navigationHeader = "NavigationHeader"
 }
 
 enum Font: String {
@@ -56,4 +64,5 @@ struct ErrorMessage {
 
 struct Image {
     static let placeholder = UIImage(named:"Avatar")
+    static let back = UIImage(named:"back")
 }

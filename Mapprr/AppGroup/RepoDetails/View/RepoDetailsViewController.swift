@@ -11,14 +11,16 @@ import UIKit
 class RepoDetailsViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: RepoDetailsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.observeEvents()
+        self.setupNavigationBar()
         self.setupViews()
     }
     
@@ -30,38 +32,65 @@ class RepoDetailsViewController: UIViewController {
     func observeEvents() {
         self.viewModel.reloadData = { [weak self] in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.collectionView.reloadData()
             }
         }
     }
     
+    func setupNavigationBar() {
+        self.setNavigationView(title: "Repository Details", leftButtonImage: Image.back)
+    }
+    
     func setupViews() {
-        self.setupTableView()
+        self.profileImage.kf.setImage(with: URL(string: self.viewModel.getAvatarImage() ?? ""), placeholder: Image.placeholder)
+        
+        self.nameLabel.text = self.viewModel.getRepositoryName()
+        self.descriptionLabel.text = self.viewModel.getDescription()
+        
+        self.setupCollectionView()
     }
     
-    func setupTableView() {
-        self.register(table: self.tableView)
-        RepoDetailsCell.registerWithTable(self.tableView)
+    func setupCollectionView() {
+        self.register(collectionView)
+        ContributorCollectionCell.registerWithCollection(collectionView)
     }
     
-    func getConroller(repo: Repository) -> RepoDetailsViewController? {
+    class func getConroller(repo: Repository) -> RepoDetailsViewController? {
         guard let vc = UIViewController.initalizeMyViewController(identifier: .repoDetailsViewController, storyboard: .main) as? RepoDetailsViewController else { return nil }
         vc.setInitialData(repo: repo)
         return vc
     }
-}
-
-extension RepoDetailsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.getNumberOfRows()
+    
+    @IBAction func projectLinkAction(_ sender: Any) {
+        
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = RepoDetailsCell.getDequeuedCell(for: tableView, indexPath: indexPath)
-            as? RepoDetailsCell else { return UITableViewCell() }
-        let (primary, secondary) = self.viewModel.getTexts(on: indexPath.row)
-        cell.configureCell(title: primary, description: secondary)
+}
+
+extension RepoDetailsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.viewModel.getNumberOfItems()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = ContributorCollectionCell.getDequeuedCell(for: collectionView, indexPath: indexPath)
+            as? ContributorCollectionCell,
+            let owner = self.viewModel.getOwner(for: indexPath.item) else { return UICollectionViewCell() }
+        cell.configureCollectionCell(owner: owner)
         return cell
     }
 }
 
+extension RepoDetailsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: Height.collectionHeight, height: Height.collectionHeight+30)
+    }
+    
+}
+
+extension RepoDetailsViewController: NavigationHeaderProtocol {
+    func leftButtonAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+}

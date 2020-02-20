@@ -10,6 +10,14 @@ import UIKit
 
 extension UIApplication {
 
+    var topSafeArea: CGFloat {
+        if #available(iOS 11.0, *) {
+            return self.keyWindow?.safeAreaInsets.top ?? 0
+        } else {
+            return 0
+        }
+    }
+    
     class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
 
         if let nav = base as? UINavigationController {

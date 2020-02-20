@@ -63,7 +63,10 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let repo = self.viewModel.getRepo(on: indexPath.row),
+            let vc = RepoDetailsViewController.getConroller(repo: repo) {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
