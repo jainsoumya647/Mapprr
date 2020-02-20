@@ -62,7 +62,9 @@ class RepoDetailsViewController: UIViewController {
     }
     
     @IBAction func projectLinkAction(_ sender: Any) {
-        
+        if let urlString = self.viewModel.getHTMLURL(), let vc = WebView.getController(urlString: urlString) {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
@@ -85,6 +87,10 @@ extension RepoDetailsViewController: UICollectionViewDelegate, UICollectionViewD
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: Height.collectionHeight, height: Height.collectionHeight+30)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
 }

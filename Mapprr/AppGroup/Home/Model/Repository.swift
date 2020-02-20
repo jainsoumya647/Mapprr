@@ -27,6 +27,7 @@ struct Repository: Codable {
     var watchersCount: Int?
     var owner: Owner?
     var description:String?
+    var htmlURL: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -35,6 +36,7 @@ struct Repository: Codable {
         case watchersCount = "watchers_count"
         case owner = "owner"
         case description = "description"
+        case htmlURL = "html_url"
     }
     
     func getName() -> String {
@@ -55,6 +57,10 @@ struct Repository: Codable {
     
     func getDescription() -> String {
         return self.description ?? "-"
+    }
+    
+    func getHTMLURL() -> String? {
+        return self.htmlURL
     }
 }
 

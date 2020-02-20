@@ -14,6 +14,7 @@ enum Storyboard: String {
 
 enum Controller: String {
     case repoDetailsViewController = "RepoDetailsViewController"
+    case webView = "WebView"
 }
 
 struct Height {

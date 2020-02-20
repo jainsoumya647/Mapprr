@@ -47,4 +47,8 @@ class RepoDetailsViewModel {
             self.owners = owners
         }
     }
+    
+    func getHTMLURL() -> String? {
+        self.repository.getHTMLURL()
+    }
 }

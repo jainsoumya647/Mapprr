@@ -52,6 +52,8 @@
 		EF23D60923FF0FCD007539FD /* NavigationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF23D60523FF0FCD007539FD /* NavigationHeader.xib */; };
 		EF23D60A23FF0FCD007539FD /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D60723FF0FCD007539FD /* NavigationProtocol.swift */; };
 		EF23D60C23FF1029007539FD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D60B23FF1028007539FD /* UIImage+Extension.swift */; };
+		EFFF75B123FF178400ECBE0E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75B023FF178400ECBE0E /* WebView.swift */; };
+		EFFF75B323FF17C600ECBE0E /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75B223FF17C600ECBE0E /* WKWebView+Extension.swift */; };
 		F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,8 @@
 		EF23D60523FF0FCD007539FD /* NavigationHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationHeader.xib; sourceTree = "<group>"; };
 		EF23D60723FF0FCD007539FD /* NavigationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		EF23D60B23FF1028007539FD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		EFFF75B023FF178400ECBE0E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		EFFF75B223FF17C600ECBE0E /* WKWebView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extension.swift"; sourceTree = "<group>"; };
 		F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapprrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -254,6 +258,7 @@
 		EF23D5A923FC6388007539FD /* AppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				EFFF75AE23FF175900ECBE0E /* WebView */,
 				EF23D5F123FDCEC2007539FD /* RepoDetails */,
 				EF23D5AA23FC6416007539FD /* Home */,
 			);
@@ -300,6 +305,7 @@
 				EF23D5B523FD9EC6007539FD /* UIViewController+Extension.swift */,
 				EF23D5B623FD9EC6007539FD /* CGFloat+Extension.swift */,
 				EF23D60B23FF1028007539FD /* UIImage+Extension.swift */,
+				EFFF75B223FF17C600ECBE0E /* WKWebView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,6 +469,22 @@
 				EF23D60723FF0FCD007539FD /* NavigationProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EFFF75AE23FF175900ECBE0E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75AF23FF176200ECBE0E /* View */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		EFFF75AF23FF176200ECBE0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75B023FF178400ECBE0E /* WebView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +735,7 @@
 				EF23D5E223FDA124007539FD /* NetworkLogger.swift in Sources */,
 				EF23D5BB23FD9EC6007539FD /* UIViewController+Extension.swift in Sources */,
 				EF23D5DA23FDA124007539FD /* Environment.swift in Sources */,
+				EFFF75B323FF17C600ECBE0E /* WKWebView+Extension.swift in Sources */,
 				EF23D5E123FDA124007539FD /* NetworkService.swift in Sources */,
 				EF23D5DF23FDA124007539FD /* HTTPMethod.swift in Sources */,
 				EF23D58023FC6127007539FD /* Mapprr.xcdatamodeld in Sources */,
@@ -740,6 +763,7 @@
 				EF23D5B723FD9EC6007539FD /* UIApplication+Extension.swift in Sources */,
 				EF23D5AD23FC64BC007539FD /* HomeViewController.swift in Sources */,
 				EF23D5FC23FDD31C007539FD /* RepoDetailsViewModel.swift in Sources */,
+				EFFF75B123FF178400ECBE0E /* WebView.swift in Sources */,
 				EF23D5DD23FDA124007539FD /* JSONParameterEncoder.swift in Sources */,
 				EF23D5EA23FDA39F007539FD /* Repository.swift in Sources */,
 			);
