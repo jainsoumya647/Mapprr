@@ -54,6 +54,11 @@
 		EF23D60C23FF1029007539FD /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF23D60B23FF1028007539FD /* UIImage+Extension.swift */; };
 		EFFF75B123FF178400ECBE0E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75B023FF178400ECBE0E /* WebView.swift */; };
 		EFFF75B323FF17C600ECBE0E /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75B223FF17C600ECBE0E /* WKWebView+Extension.swift */; };
+		EFFF75B523FF1C1800ECBE0E /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75B423FF1C1800ECBE0E /* RepositoryService.swift */; };
+		EFFF75BB23FF1FBE00ECBE0E /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75BA23FF1FBE00ECBE0E /* RepositoriesViewController.swift */; };
+		EFFF75BD23FF230800ECBE0E /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75BC23FF230800ECBE0E /* RepositoriesViewModel.swift */; };
+		EFFF75C023FFABA100ECBE0E /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75BE23FFABA100ECBE0E /* RepositoryCell.swift */; };
+		EFFF75C123FFABA100ECBE0E /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFF75BF23FFABA100ECBE0E /* RepositoryCell.xib */; };
 		F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */; };
 /* End PBXBuildFile section */
 
@@ -134,6 +139,11 @@
 		EF23D60B23FF1028007539FD /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		EFFF75B023FF178400ECBE0E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EFFF75B223FF17C600ECBE0E /* WKWebView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extension.swift"; sourceTree = "<group>"; };
+		EFFF75B423FF1C1800ECBE0E /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		EFFF75BA23FF1FBE00ECBE0E /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		EFFF75BC23FF230800ECBE0E /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
+		EFFF75BE23FFABA100ECBE0E /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		EFFF75BF23FFABA100ECBE0E /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapprrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -258,6 +268,7 @@
 		EF23D5A923FC6388007539FD /* AppGroup */ = {
 			isa = PBXGroup;
 			children = (
+				EFFF75B623FF1CA500ECBE0E /* ReposOfContributor */,
 				EFFF75AE23FF175900ECBE0E /* WebView */,
 				EF23D5F123FDCEC2007539FD /* RepoDetails */,
 				EF23D5AA23FC6416007539FD /* Home */,
@@ -390,6 +401,7 @@
 			children = (
 				EF23D5E423FDA140007539FD /* SearchRepository.swift */,
 				EF23D5EF23FDCBD4007539FD /* Contributors.swift */,
+				EFFF75B423FF1C1800ECBE0E /* RepositoryService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -485,6 +497,41 @@
 				EFFF75B023FF178400ECBE0E /* WebView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		EFFF75B623FF1CA500ECBE0E /* ReposOfContributor */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75B823FF1F6900ECBE0E /* ViewModel */,
+				EFFF75B723FF1CE400ECBE0E /* View */,
+			);
+			path = ReposOfContributor;
+			sourceTree = "<group>";
+		};
+		EFFF75B723FF1CE400ECBE0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75B923FF1F8400ECBE0E /* Cell */,
+				EFFF75BA23FF1FBE00ECBE0E /* RepositoriesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFFF75B823FF1F6900ECBE0E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75BC23FF230800ECBE0E /* RepositoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EFFF75B923FF1F8400ECBE0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EFFF75BE23FFABA100ECBE0E /* RepositoryCell.swift */,
+				EFFF75BF23FFABA100ECBE0E /* RepositoryCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,6 +644,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF23D58523FC6131007539FD /* LaunchScreen.storyboard in Resources */,
+				EFFF75C123FFABA100ECBE0E /* RepositoryCell.xib in Resources */,
 				EF23D60023FEEB03007539FD /* ContributorCollectionCell.xib in Resources */,
 				EF23D58223FC6131007539FD /* Assets.xcassets in Resources */,
 				EF23D5CB23FD9FA3007539FD /* HomeCell.xib in Resources */,
@@ -738,6 +786,7 @@
 				EFFF75B323FF17C600ECBE0E /* WKWebView+Extension.swift in Sources */,
 				EF23D5E123FDA124007539FD /* NetworkService.swift in Sources */,
 				EF23D5DF23FDA124007539FD /* HTTPMethod.swift in Sources */,
+				EFFF75B523FF1C1800ECBE0E /* RepositoryService.swift in Sources */,
 				EF23D58023FC6127007539FD /* Mapprr.xcdatamodeld in Sources */,
 				EF23D57623FC6127007539FD /* AppDelegate.swift in Sources */,
 				EF23D5C323FD9EF2007539FD /* ReusableTableViewCell.swift in Sources */,
@@ -746,7 +795,9 @@
 				EF23D60A23FF0FCD007539FD /* NavigationProtocol.swift in Sources */,
 				EF23D5DB23FDA124007539FD /* ParameterEncoding.swift in Sources */,
 				EF23D5DC23FDA124007539FD /* URLParameterEncoder.swift in Sources */,
+				EFFF75BD23FF230800ECBE0E /* RepositoriesViewModel.swift in Sources */,
 				EF23D5C223FD9EF2007539FD /* ActivityIndicator.swift in Sources */,
+				EFFF75BB23FF1FBE00ECBE0E /* RepositoriesViewController.swift in Sources */,
 				EF23D5C123FD9EF2007539FD /* ReusableCollectionViewCell.swift in Sources */,
 				EF23D5BC23FD9EC6007539FD /* CGFloat+Extension.swift in Sources */,
 				EF23D57823FC6127007539FD /* SceneDelegate.swift in Sources */,
@@ -755,6 +806,7 @@
 				EF23D60C23FF1029007539FD /* UIImage+Extension.swift in Sources */,
 				EF23D5E523FDA140007539FD /* SearchRepository.swift in Sources */,
 				EF23D5E023FDA124007539FD /* EndPointType.swift in Sources */,
+				EFFF75C023FFABA100ECBE0E /* RepositoryCell.swift in Sources */,
 				EF23D5C623FD9F23007539FD /* Constants.swift in Sources */,
 				EF23D5E723FDA15B007539FD /* HomeViewModel.swift in Sources */,
 				EF23D5DE23FDA124007539FD /* HTTPTask.swift in Sources */,

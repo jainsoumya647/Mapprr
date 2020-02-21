@@ -108,7 +108,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4j-8B-tad">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="x4j-8B-tad">
                                                 <rect key="frame" x="0.0" y="25.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -233,6 +233,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aP-e8-FXj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1929" y="882"/>
+        </scene>
+        <!--Repositories View Controller-->
+        <scene sceneID="4am-fB-Q4D">
+            <objects>
+                <viewController storyboardIdentifier="RepositoriesViewController" id="0Cs-jN-L38" customClass="RepositoriesViewController" customModule="Mapprr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cg0-zk-9PO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="sAN-sp-Pft">
+                                <rect key="frame" x="0.0" y="264" width="414" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvf-y2-t74">
+                                <rect key="frame" x="20" y="114" width="374" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Fem-ht-Qrg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sAN-sp-Pft" firstAttribute="top" secondItem="mvf-y2-t74" secondAttribute="bottom" id="9uU-Kb-uj0"/>
+                            <constraint firstItem="qA1-Mp-2GI" firstAttribute="trailing" secondItem="mvf-y2-t74" secondAttribute="trailing" constant="20" id="Y8c-Hj-AmS"/>
+                            <constraint firstItem="qA1-Mp-2GI" firstAttribute="bottom" secondItem="sAN-sp-Pft" secondAttribute="bottom" id="aL9-Ki-E5Q"/>
+                            <constraint firstItem="mvf-y2-t74" firstAttribute="top" secondItem="qA1-Mp-2GI" secondAttribute="top" constant="70" id="l1o-w8-DIN"/>
+                            <constraint firstItem="sAN-sp-Pft" firstAttribute="leading" secondItem="qA1-Mp-2GI" secondAttribute="leading" id="p0O-b2-W27"/>
+                            <constraint firstItem="mvf-y2-t74" firstAttribute="leading" secondItem="qA1-Mp-2GI" secondAttribute="leading" constant="20" id="v3Q-7M-apT"/>
+                            <constraint firstItem="qA1-Mp-2GI" firstAttribute="trailing" secondItem="sAN-sp-Pft" secondAttribute="trailing" id="y39-vL-PLC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qA1-Mp-2GI"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="mvf-y2-t74" id="azr-Jt-cVH"/>
+                        <outlet property="tableView" destination="sAN-sp-Pft" id="QXc-le-ZuP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w5m-5e-Vpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2921.739130434783" y="881.91964285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iBN-6o-lYc">

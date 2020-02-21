@@ -90,7 +90,10 @@ extension RepoDetailsViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if let owner = self.viewModel.getOwner(for: indexPath.item),
+            let vc = RepositoriesViewController.getConroller(owner: owner) {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
 }
