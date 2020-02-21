@@ -10,6 +10,10 @@ import UIKit
 
 extension UIApplication {
 
+    var keyWindow:UIWindow? {
+        return windows.filter {$0.isKeyWindow}.first
+    }
+    
     var topSafeArea: CGFloat {
         if #available(iOS 11.0, *) {
             return self.keyWindow?.safeAreaInsets.top ?? 0

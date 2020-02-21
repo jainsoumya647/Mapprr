@@ -23,7 +23,7 @@ class HomeViewModel {
         }
     }
     
-    func sortReposAndSetLimit(to limit: Int = 10, fromRepos repos: [Repository]) -> [Repository] {
+    private func sortReposAndSetLimit(to limit: Int = 10, fromRepos repos: [Repository]) -> [Repository] {
         var topRepos = repos.prefix(limit)
         topRepos.sort { (r1, r2) -> Bool in
             return (r1.watchersCount ?? 0) > (r2.watchersCount ?? 0)

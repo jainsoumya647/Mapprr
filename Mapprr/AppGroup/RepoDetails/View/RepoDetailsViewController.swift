@@ -24,12 +24,11 @@ class RepoDetailsViewController: UIViewController {
         self.setupViews()
     }
     
-    
-    func setInitialData(repo: Repository) {
+    private func setInitialData(repo: Repository) {
         self.viewModel = RepoDetailsViewModel(repo: repo)
     }
     
-    func observeEvents() {
+    private func observeEvents() {
         self.viewModel.reloadData = { [weak self] in
             DispatchQueue.main.async {
                 self?.collectionView.reloadData()
@@ -37,11 +36,11 @@ class RepoDetailsViewController: UIViewController {
         }
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         self.setNavigationView(title: "Repository Details", leftButtonImage: Image.back)
     }
     
-    func setupViews() {
+    private func setupViews() {
         self.profileImage.kf.setImage(with: URL(string: self.viewModel.getAvatarImage() ?? ""), placeholder: Image.placeholder)
         
         self.nameLabel.text = self.viewModel.getRepositoryName()
@@ -50,7 +49,7 @@ class RepoDetailsViewController: UIViewController {
         self.setupCollectionView()
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         self.register(collectionView)
         ContributorCollectionCell.registerWithCollection(collectionView)
     }

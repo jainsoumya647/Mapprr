@@ -27,7 +27,7 @@ class RepositoriesViewModel {
         return self.owner.avatarURL
     }
     
-    func getRepositories(owner: Owner) {
+    private func getRepositories(owner: Owner) {
         if let user = owner.login {
             RepositoryService().getRepositories(of: user) { (repositories) in
                 self.repositories = repositories

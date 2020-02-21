@@ -22,15 +22,15 @@ class RepositoriesViewController: UIViewController {
         self.setupViews()
     }
     
-    func setInitialData(owner: Owner) {
+    private func setInitialData(owner: Owner) {
         self.viewModel = RepositoriesViewModel(owner: owner)
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         self.setNavigationView(title: "Contributors Details", leftButtonImage: Image.back)
     }
     
-    func observeEvents() {
+    private func observeEvents() {
         self.viewModel.reloadData = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -38,13 +38,13 @@ class RepositoriesViewController: UIViewController {
         }
     }
     
-    func setupViews() {
+    private func setupViews() {
         self.imageView.kf.setImage(with: URL(string: self.viewModel.getAvatarImage() ?? ""), placeholder: Image.placeholder)
         
         self.setupTableView()
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         self.register(table: self.tableView)
         RepositoryCell.registerWithTable(self.tableView)
     }
@@ -79,19 +79,32 @@ extension RepositoriesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return Height.headerHeight
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var frame = tableView.frame
-        frame.size.height = 30
-        frame.origin.y = 0
+        return self.getHeaderView()
+    }
+    
+    private func getHeaderView() -> UIView {
+        var frame = self.getHeaderOuterViewFrame()
         let headerView = UIView(frame: frame)
         frame.origin.x = 20
+        self.setLabelOnHeaderView(frame: frame, headerView: headerView)
+        return headerView
+    }
+    
+    private func setLabelOnHeaderView(frame: CGRect, headerView: UIView) {
         let label = UILabel(frame: frame)
         label.text = "Repositories"
         headerView.addSubview(label)
-        return headerView
+    }
+    
+    private func getHeaderOuterViewFrame() -> CGRect {
+        var frame = self.tableView.frame
+        frame.size.height = Height.headerHeight
+        frame.origin.y = 0
+        return frame
     }
 }
 

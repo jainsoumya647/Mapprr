@@ -42,7 +42,7 @@ class RepoDetailsViewModel {
         return self.repository.owner?.avatarURL
     }
     
-    func getContributors(repo: Repository) {
+    private func getContributors(repo: Repository) {
         ContributorsService().getContributors(repoName: repo.getFullName()) { (owners) in
             self.owners = owners
         }

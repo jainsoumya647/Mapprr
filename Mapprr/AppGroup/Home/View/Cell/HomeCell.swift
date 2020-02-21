@@ -22,7 +22,7 @@ class HomeCell: ReusableTableViewCell {
         self.setupCell()
     }
 
-    func setupCell() {
+    private func setupCell() {
         self.outerView.setCornerRadiusAndShadow()
     }
     

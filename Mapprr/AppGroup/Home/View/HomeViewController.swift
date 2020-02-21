@@ -22,11 +22,11 @@ class HomeViewController: UIViewController {
         self.setupViews()
     }
 
-    func initalizeData() {
+    private func initalizeData() {
         self.viewModel = HomeViewModel()
     }
     
-    func observeEvents() {
+    private func observeEvents() {
         self.viewModel.reloadData = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
@@ -34,12 +34,12 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func setupViews() {
+    private func setupViews() {
         self.searchBar.delegate = self
         self.setupTableView()
     }
     
-    func setupTableView() {
+    private func setupTableView() {
         self.register(table: self.tableView)
         HomeCell.registerWithTable(self.tableView)
     }

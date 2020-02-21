@@ -64,19 +64,3 @@ struct Repository: Codable {
     }
 }
 
-struct Owner: Codable {
-    
-    var id: Int
-    var avatarURL: String?
-    var login: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case avatarURL = "avatar_url"
-        case login = "login"
-    }
-    
-    func getAvatarURL() -> String? {
-        return self.avatarURL
-    }
-}

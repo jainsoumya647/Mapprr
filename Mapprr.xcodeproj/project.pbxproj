@@ -59,6 +59,7 @@
 		EFFF75BD23FF230800ECBE0E /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75BC23FF230800ECBE0E /* RepositoriesViewModel.swift */; };
 		EFFF75C023FFABA100ECBE0E /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75BE23FFABA100ECBE0E /* RepositoryCell.swift */; };
 		EFFF75C123FFABA100ECBE0E /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFFF75BF23FFABA100ECBE0E /* RepositoryCell.xib */; };
+		EFFF75C32400333100ECBE0E /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFF75C22400333100ECBE0E /* Owner.swift */; };
 		F6517B87741EDDACE84259EF /* Pods_Mapprr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BD4C5916D1095A0B0B57710 /* Pods_Mapprr.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		EFFF75BC23FF230800ECBE0E /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		EFFF75BE23FFABA100ECBE0E /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		EFFF75BF23FFABA100ECBE0E /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
+		EFFF75C22400333100ECBE0E /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		F9A9105F207D2429311A1C2F /* Pods_MapprrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapprrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -410,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				EF23D5E923FDA39F007539FD /* Repository.swift */,
+				EFFF75C22400333100ECBE0E /* Owner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -814,6 +817,7 @@
 				EF23D5F423FDCEFC007539FD /* RepoDetailsViewController.swift in Sources */,
 				EF23D5B723FD9EC6007539FD /* UIApplication+Extension.swift in Sources */,
 				EF23D5AD23FC64BC007539FD /* HomeViewController.swift in Sources */,
+				EFFF75C32400333100ECBE0E /* Owner.swift in Sources */,
 				EF23D5FC23FDD31C007539FD /* RepoDetailsViewModel.swift in Sources */,
 				EFFF75B123FF178400ECBE0E /* WebView.swift in Sources */,
 				EF23D5DD23FDA124007539FD /* JSONParameterEncoder.swift in Sources */,

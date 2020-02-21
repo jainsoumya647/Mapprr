@@ -25,7 +25,7 @@ struct Height {
     }
     static let naviagtionHeight: CGFloat = 50 + Height.safeTopStatusArea()
     static let footerHeight:CGFloat = 40
-    static let headerHeight:CGFloat = 105 //+ Height.safeTopStatusArea()
+    static let headerHeight:CGFloat = 30 //+ Height.safeTopStatusArea()
     static let collectionHeight:CGFloat = 100
     static let estimatedHeight:CGFloat = 200
     static let padding:CGFloat = 20
@@ -54,10 +54,6 @@ enum Font: String {
     case semiBold = "Montserrat-SemiBold"
     case bold = "Montserrat-Bold"
     case extraBold = "Montserrat-ExtraBold"
-}
-
-struct Text {
-    static let curatedForMayank = "CURATED FOR MAYANK"
 }
 
 struct ErrorMessage {
